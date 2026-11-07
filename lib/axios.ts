@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Khởi tạo instance axios với cấu hình mặc định
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000', // Thay đổi port nếu backend của bạn chạy port khác
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000', // Đã sửa thành 4000 Thay đổi port nếu backend của bạn chạy port khác
   headers: {
     'Content-Type': 'application/json',
   },

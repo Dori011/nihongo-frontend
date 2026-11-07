@@ -50,7 +50,10 @@ export function MascotProvider({ children }: { children: ReactNode }) {
   const [sleeping, setSleeping] = useState(false);
 
   const idRef = useRef(0);
-  const lastActiveRef = useRef(Date.now());
+  const lastActiveRef = useRef<number>(0);
+  useEffect(() => {
+  lastActiveRef.current = Date.now();
+}, []);
   const sleepingRef = useRef(false);
   const hiddenAtRef = useRef<number | null>(null);
 
